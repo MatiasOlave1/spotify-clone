@@ -2,7 +2,7 @@ const songs = [
   { name: "Honey Kisses", src: "music/cancion1.mp3" },
   { name: "Music free", src: "music/cancion2.mp3" },
   { name: "MONTAGEM DIREÇÃO", src: "music/cancion3.mp3", cover: "img/cover3.jpg"},
-  { name: "MONTAGEM COMA", src: "music/cancion4.mp3"}
+  { name: "MONTAGEM COMA", src: "music/cancion4.mp3", cover: "img/cover4.jpg"}
 ];
 
 let currentIndex = 0;
