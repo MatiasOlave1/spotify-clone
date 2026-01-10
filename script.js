@@ -20,8 +20,17 @@ function playSong(index) {
   document.getElementById("cover").src = songs[index].cover;
 }
 function togglePlay() {
-  if (audio.src === "") return;
-  audio.paused ? audio.play() : audio.pause();  
+  if (!audio.src) return;
+
+  const btn = event.target;
+
+  if (audio.paused) {
+    audio.play();
+    btn.textContent = "⏸";
+  } else {
+    audio.pause();
+    btn.textContent = "▶️";
+  }
 }
 
 function nextSong() {
