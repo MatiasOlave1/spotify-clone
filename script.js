@@ -23,13 +23,16 @@ function playSong(index) {
 }
 function togglePlay() {
   if (!audio.src) return;
-
+  const songName = songs[currentIndex].name;
   if (audio.paused) {
     audio.play();
     playBtn.textContent = "⏸";
+    nowPlaying.textContent = "Reproduciendo: " + songName;
   } else {
     audio.pause();
     playBtn.textContent = "▶️";
+    nowPlaying.textContent = "Pausado: " + songName;
+
   }
 }
 
