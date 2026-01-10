@@ -20,18 +20,10 @@ function playSong(index) {
   document.getElementById("cover").src = songs[index].cover;
 }
 function togglePlay() {
-  if (!audio.src) return;
-
-  const btn = event.target;
-
-  if (audio.paused) {
-    audio.play();
-    btn.textContent = "⏸";
-  } else {
-    audio.pause();
-    btn.textContent = "▶️";
-  }
+  if (audio.src === "") return;
+  audio.paused ? audio.play() : audio.pause();  
 }
+
 function nextSong() {
   currentIndex = (currentIndex + 1) % songs.length;
   playSong(currentIndex);
