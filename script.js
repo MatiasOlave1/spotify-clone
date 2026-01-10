@@ -24,17 +24,13 @@ function playSong(index) {
 function togglePlay() {
   if (!audio.src) return;
 
-  
-
   if (audio.paused) {
     audio.play();
-    btn.textContent = "⏸";
+    playBtn.textContent = "⏸";
   } else {
     audio.pause();
     playBtn.textContent = "▶️";
-
   }
-  
 }
 
 function nextSong() {
