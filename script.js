@@ -9,6 +9,7 @@ const songs = [
 let currentIndex = 0;
 const audio = document.getElementById("audio");
 const nowPlaying = document.getElementById("nowPlaying");
+const playBtn = document.getElementById("playBtn");
 
 function playSong(index) {
   currentIndex = index;
@@ -18,19 +19,22 @@ function playSong(index) {
   nowPlaying.textContent = "Reproduciendo: " + songs[index].name;
 
   document.getElementById("cover").src = songs[index].cover;
+  playBtn.textContent = "⏸";
 }
 function togglePlay() {
   if (!audio.src) return;
 
-  const btn = event.target;
+  
 
   if (audio.paused) {
     audio.play();
     btn.textContent = "⏸";
   } else {
     audio.pause();
-    btn.textContent = "▶️";
+    playBtn.textContent = "▶️";
+
   }
+  
 }
 
 function nextSong() {
