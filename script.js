@@ -3,7 +3,8 @@ const songs = [
   { name: "Music free", src: "music/cancion2.mp3" },
   { name: "MONTAGEM DIREÇÃO", src: "music/cancion3.mp3", cover: "img/cover3.jpg"},
   { name: "MONTAGEM COMA", src: "music/cancion4.mp3", cover: "img/cover4.jpg"},
-  { name: "MONTAGEM TOMADA", src: "music/cancion5.mp3", cover: "img/cover5.jpg"}
+  { name: "MONTAGEM TOMADA", src: "music/cancion5.mp3", cover: "img/cover5.jpg"},
+  { name: "On the flip", src: "music/cancion6.mp3", cover: "img/cover6.jpg"},
 ];
 
 let currentIndex = 0;
