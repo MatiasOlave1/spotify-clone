@@ -94,6 +94,10 @@ audio.addEventListener("ended", nextSong);
 document.querySelectorAll(".playlist li").forEach((li, index) => {
   li.dataset.index = index;
   li.addEventListener("click", () => {
-    playSong(index);
+    if (currentIndex === index && !audio.paused) {
+      togglePlay();
+    } else {
+      playSong(index);
+    }
   });
 });
