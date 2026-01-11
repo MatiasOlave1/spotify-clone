@@ -11,19 +11,38 @@
 </head>
 <body>
     
+<header class="topbar">
+  <div class="left">
+    <i class="fa-brands fa-spotify spotify-logo"></i>
+
+    <div class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="What do you want to play?" />
+    </div>
+  </div>
+
+  <div class="right">
+    <a href="#">Premium</a>
+    <a href="#">Support</a>
+    <a href="#">Download</a>
+    <span class="divider">|</span>
+    <a href="#">Install App</a>
+    <button class="login-btn">Log in</button>
+  </div>
+</header>
 <div class="container">
     <h1>Mi página de Música</h1>
   
     <ul class="playlist">
-        <li onclick="playSong(0)"> Honey Kisses </li>
-        <li onclick="playSong(1)"> Music free </li>
-        <li onclick="playSong(2)"> MONTAGEM DIREÇÃO </li>
-        <li onclick="playSong(3)"> MONTAGEM COMA</li>
-        <li onclick="playSong(4)"> MONTAGEM TOMADA</li>
+        <li data-index="0">Honey Kisses</li>
+        <li data-index="1">Music free</li>
+        <li data-index="2">MONTAGEM DIREÇÃO </li>
+        <li data-index="3">MONTAGEM COMA </li>
+        <li data-index="3">MONTAGEM TOMADA </li>
     </ul>
 
     <div class = "player">
-        <img id="cover" class="cover" src="" alt="Portada">
+        <img id="cover" class="cover" src="https://via.placeholder.com/200x200?text=No+Cover" alt="Portada">
         <p id="nowPlaying">Nada sonando</p>
                 <div class="progress-container" onclick="setProgress(event)">
             <div id="progress"></div>
@@ -34,7 +53,7 @@
             <span id="duration">0:00</span>
         </div>
         <button onclick="prevSong()">⏮</button>
-        <button id="playBtn" onclick="togglePlay()">▶️</button>
+        <button id="playBtn" aria-label="Play / Pause" onclick="togglePlay()">▶️</button>
         <button onclick="nextSong()">⏭</button>
         <div class="volume-control">
     🔊
