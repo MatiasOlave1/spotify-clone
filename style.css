@@ -3,9 +3,8 @@ body {
 }
 
 .container {
-    width: 300px;
+    max-width: 300px;
     margin: auto;
-    text-align: center;
 }
 
 .playlist li {
