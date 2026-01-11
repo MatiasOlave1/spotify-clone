@@ -65,3 +65,56 @@ body {
   display: block;
   box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }   
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  padding: 10px 20px;
+  color: white;
+}
+
+.topbar .left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.spotify-logo {
+  font-size: 28px;
+  color: white;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 20px;
+  gap: 8px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.topbar .right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.topbar .right a {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.login-btn {
+  background: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+}
