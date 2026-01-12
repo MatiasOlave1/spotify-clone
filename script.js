@@ -7,12 +7,12 @@ const songs = [
   // 🌐 ONLINE (PIXABAY)
   {
     name: "Chill Abstract",
-    src: "https://cdn.pixabay.com/download/audio/2023/03/30/audio_9a1a8d0e5a.mp3",
+    src: "https://cdn.pixabay.com/download/audio/2022/03/15/audio_7d4b7e78fd.mp3?filename=chill-abstract-11028.mp3",
     cover: "https://via.placeholder.com/200?text=Chill"
   },
-  {
+  { 
     name: "Epic Cinematic",
-    src: "https://cdn.pixabay.com/download/audio/2023/02/28/audio_7f2eab4c6b.mp3",
+    src: "https://cdn.pixabay.com/download/audio/2022/01/28/audio_8e4a2b9d9c.mp3?filename=epic-cinematic-10380.mp3",
     cover: "https://via.placeholder.com/200?text=Epic"
   }
 ];
@@ -101,7 +101,6 @@ function formatTime(seconds) {
 /* 🔁 Autoplay siguiente */
 audio.addEventListener("ended", nextSong);
 
-/* 🎵 CLICK EN PLAYLIST (LO QUE ME PEDISTE) */
 const playlist = document.getElementById("playlist");
 
 songs.forEach((song, index) => {
