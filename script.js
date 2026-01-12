@@ -1,9 +1,20 @@
 const songs = [
-  { name: "MONTAGEM DIREÇÃO", src: "music/cancion3.mp3", cover: "img/cover3.jpg"},
-  { name: "MONTAGEM COMA", src: "music/cancion4.mp3", cover: "img/cover4.jpg"},
-  { name: "MONTAGEM TOMADA", src: "music/cancion5.mp3", cover: "img/cover5.jpg"},
-  { name: "On the flip", src: "music/cancion6.mp3", cover: "img/cover6.jpg"},
-  { name: "By myself", src: "music/cancion7.mp3", cover: "img/cover7.jpg"}
+  // 🎵 LOCALES
+  { name: "MONTAGEM DIREÇÃO", src: "music/cancion3.mp3", cover: "img/cover3.jpg" },
+  { name: "MONTAGEM COMA", src: "music/cancion4.mp3", cover: "img/cover4.jpg" },
+  { name: "MONTAGEM TOMADA", src: "music/cancion5.mp3", cover: "img/cover5.jpg" },
+
+  // 🌐 ONLINE (PIXABAY)
+  {
+    name: "Chill Abstract",
+    src: "https://cdn.pixabay.com/download/audio/2023/03/30/audio_9a1a8d0e5a.mp3",
+    cover: "https://via.placeholder.com/200?text=Chill"
+  },
+  {
+    name: "Epic Cinematic",
+    src: "https://cdn.pixabay.com/download/audio/2023/02/28/audio_7f2eab4c6b.mp3",
+    cover: "https://via.placeholder.com/200?text=Epic"
+  }
 ];
 
 let currentIndex = 0;
@@ -91,8 +102,12 @@ function formatTime(seconds) {
 audio.addEventListener("ended", nextSong);
 
 /* 🎵 CLICK EN PLAYLIST (LO QUE ME PEDISTE) */
-document.querySelectorAll(".playlist li").forEach((li, index) => {
-  li.dataset.index = index;
+const playlist = document.getElementById("playlist");
+
+songs.forEach((song, index) => {
+  const li = document.createElement("li");
+  li.textContent = song.name;
+
   li.addEventListener("click", () => {
     if (currentIndex === index && !audio.paused) {
       togglePlay();
@@ -100,4 +115,6 @@ document.querySelectorAll(".playlist li").forEach((li, index) => {
       playSong(index);
     }
   });
+
+  playlist.appendChild(li);
 });
